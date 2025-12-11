@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CryptoSearch - Пошук Криптовалют</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              slate: {
+                850: '#1e293b', // Custom dark background
+                900: '#0f172a',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+      /* Custom Google-like loader */
+      .google-loader span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 0 2px;
+        animation: bounce 1.4s infinite ease-in-out both;
+      }
+      .google-loader span:nth-child(1) { background-color: #4285F4; animation-delay: -0.32s; }
+      .google-loader span:nth-child(2) { background-color: #DB4437; animation-delay: -0.16s; }
+      .google-loader span:nth-child(3) { background-color: #F4B400; }
+      .google-loader span:nth-child(4) { background-color: #0F9D58; }
+      
+      @keyframes bounce {
+        0%, 80%, 100% { transform: scale(0); }
+        40% { transform: scale(1); }
+      }
+      
+      /* Toggle Checkbox Styles */
+      .toggle-checkbox:checked {
+        right: 0;
+        border-color: #3b82f6;
+      }
+      .toggle-checkbox:checked + .toggle-label {
+        background-color: #3b82f6;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.1/",
+    "react": "https://esm.sh/react@^19.2.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.1/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "recharts": "https://esm.sh/recharts@^3.5.1",
+    "apexcharts": "https://esm.sh/apexcharts@3.45.2",
+    "react-apexcharts": "https://esm.sh/react-apexcharts@1.4.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-50 text-gray-900 dark:bg-slate-900 dark:text-gray-100 transition-colors duration-300">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
